@@ -1,0 +1,163 @@
+:root {
+    --primary-color: #3f8cff;
+}
+
+/* ---- Products ---- */
+
+.products {
+    width: 80%;
+    height: 950px;
+    margin: 20px auto;
+    background: rgb(226, 214, 199);
+    border-radius: 20px;
+    padding: 0 15px;
+}
+
+.tools {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    top: 0;
+    background: rgb(226, 214, 199);
+}
+.action {
+    width: 44%;
+    display: flex;
+    justify-content: space-between;
+}
+.action form button {
+    outline: none;
+    border: none;
+    background: transparent;
+    font-size: 23px;
+}
+.action form button:hover {
+    color: var(--primary-color);
+}
+.action input {
+    font-size: 14px;
+    padding: 15px;
+    outline: none;
+    border: none;
+    border-radius: 10px;
+}
+.action a button {
+    padding: 15px;
+    color: white;
+    background-color: var(--primary-color);
+    outline: none;
+    border: none;
+    border-radius: 10px;
+}
+.action a button:hover {
+    opacity: 0.5;
+}
+.container {
+    width: 100%;
+    height: 790px;
+    overflow: scroll;
+}
+.item-list {
+    margin: 10px 0;
+    width: 100%;
+    border-collapse: collapse;
+}
+.item-list th,td {
+    padding: 20px;
+    width: 18%;
+    border-bottom: 2px solid #c7b6b6;
+}
+th:first-child,td:first-child {
+    width: 6%;
+}
+.item-list td img {
+    width: 90%;
+}
+.func button {
+    padding: 5px 6px;
+    border-radius: 5px;
+    background: var(--primary-color);
+    border: none;
+    outline: none;
+    color: white;
+}
+.func button:hover {
+    opacity: 0.5;
+}
+/* ---- End Products ---- */
+
+/* ---- ScrollBar ---- */
+
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: var(--primary-color); 
+    border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    opacity: 0.5;
+}
+
+/* ---- End ScrollBar ---- */
+
+/* ---- delete Logger ---- */
+
+.logger {
+    position: fixed;
+    background: rgba(0, 0, 0, 0.6);
+    top:0;
+    width: 100%;
+    height: 100%;
+    display: none;
+    align-items: center;
+    justify-content: center;
+}
+.show {
+    display: flex;
+}
+.box {
+    width: 350px;
+    background: #c7b6b6;
+    text-align: center;
+    border-radius: 20px;
+    padding: 5px;
+}
+.box h3 {
+    font-weight: bold;
+    margin: 10px;
+    border-bottom: 2px solid var(--primary-color);
+}
+.box p {
+    text-align: left;
+    margin: 30px;
+}
+
+.onClick {
+    display: flex;
+    justify-content: right;
+    padding: 5px;
+}
+
+.onClick button {
+    padding: 10px 20px;
+    border-radius: 5px;
+    background: var(--primary-color);
+    border: none;
+    outline: none;
+    color: white;
+    margin: 0 10px;
+}
+
+.onClick button:hover {
+    opacity: 0.5;
+}
+/* ---- End delete Logger ---- */

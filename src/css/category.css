@@ -1,0 +1,12 @@
+.cate-list {
+    margin: 10px 0;
+    width: 100%;
+    border-collapse: collapse;
+}
+.cate-list th,td {
+    border-bottom: 2px solid #c7b6b6;
+    text-align: center;
+}
+.cate-list td img {
+    width: 70%;
+}

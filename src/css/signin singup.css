@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+:root {
+    --primary-color: rgba(12, 208, 12, 0.539);
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    height: 100vh;
+    font-family: 'Roboto';
+    background: url('../images/background.png') no-repeat;
+    background-size: 100% 100%;
+
+}
+
+.container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    background: rgba(0,0,0,0.35);
+}
+
+/* ---- Slogan ----*/
+.slogan {
+    position: fixed;
+    top: 8%;
+    right: 25%;
+    z-index: 2;
+}
+.slogan h1 {
+    color: rgb(253, 251, 251);
+    font-size: 55px;
+}
+
+/* ---- END Slogan ----*/
+
+
+form {
+    width: 300px;
+    background: white;
+    padding: 15px;
+    border-radius: 15px;
+    height: 100%;
+}
+
+form input {
+    width: 100%;
+    padding: 10px 5px;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid var(--primary-color);
+    margin: 10px 0;
+}
+
+form button {
+    margin: 10px 0;
+    width: 100%;
+    outline: none;
+    border: none;
+    padding: 10px 5px;
+    background: rgba(192, 28, 28, 0.589);
+    color: white;
+    font-weight: 600;
+}
+
+form button:hover {
+    background-color: rgba(192, 28, 28, 0.70);
+}

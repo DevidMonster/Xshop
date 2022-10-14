@@ -1,0 +1,107 @@
+.your-cart {
+    padding: 20px;
+}
+.box {
+    margin: 0 10px;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    border-radius: 20px;
+    height: 450px;
+    overflow: scroll;
+    position: relative;
+}
+.alert {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+}
+.item {
+    width: 50%;
+    height: 300px;
+    background: rgb(26, 40, 51);
+    clip-path: polygon(4% 0, 87% 0, 96% 100%, 13% 100%);
+    display: flex;
+
+    color: white;
+    border: 1px solid black;
+}
+.avaItem {
+  width: 45%;
+  z-index: 1;
+  transform: translateX(23px);
+}
+
+.content {
+    width: 55%;
+    clip-path: polygon(4% 0, 100% 0, 100% 100%, 19% 100%);
+    z-index: 2;
+    background: rgb(26, 40, 51);
+    transform: translateX(-45px);
+    padding: 10px;
+    position: relative;
+}
+
+.content h1 {
+    width: 85%;
+    margin-left: 25px;
+}
+.content h2 {
+    margin-left: 30px;
+}
+.content span {
+    margin-left: 40px;
+}
+.content p {
+    margin-left: 50px;
+}
+.itemFooter {
+    width: 120px;
+    clip-path: polygon(4% 0, 90% 0, 96% 100%, 10% 100%);
+    margin: 10px 0 0 50px;
+}
+
+.delete-item-in-cart {
+    padding: 10px 20px;
+    border: none;
+    outline: none;
+    color: white;
+    background: linear-gradient(78deg, rgba(252, 248, 248, 0.247) 50%, rgba(34, 4, 4, 0.726) 50%);
+    background-size: 400% 400%;
+}
+.delete-item-in-cart:hover {
+    animation: gradient 2s ease-in-out forwards;
+
+}
+
+.total {
+    font-size: larger;
+    font-weight: bold;
+    margin: 20px;
+
+    display: flex;
+    align-items: center;
+    justify-content: right;
+}
+
+.btn-accept {
+    padding: 10px 15px;
+    border: none;
+    outline: none;
+    color: white;
+    border-radius: 5px;
+    background-color: rgba(192, 28, 28, 0.589);
+}
+.btn-accept:hover {  
+    background-color: rgba(192, 28, 28, 0.70); 
+}
+
+@keyframes gradient {
+	0% {
+		background-position:40% 100%;
+	}
+    100% {
+        background-position: 100%;
+    }
+}

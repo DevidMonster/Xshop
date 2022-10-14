@@ -1,0 +1,51 @@
+:root {
+    --primary-color: #3f8cff;
+}
+
+
+
+/* ---- Form ---- */
+
+.addNew {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 30px 0;
+}
+.add {
+    width: 60%;
+}
+.add input {
+    width: 100%;
+    padding: 10px 5px;
+    outline: none;
+}
+input[type="radio"] {
+    width: unset;
+}
+.add button {
+    display: block;
+    margin: 10px auto;
+    padding: 7px 10px;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    background: var(--primary-color);
+    color: white;
+    font-weight: bold;
+}
+.add textarea {
+    outline: none;
+    padding: 5px;
+}
+.add select {
+    width: 100%;
+    padding: 10px 5px;
+}
+.add span {
+    display: inline-block;
+    margin: 10px;
+}
+
+/* ---- End Form ---- */

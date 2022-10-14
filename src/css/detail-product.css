@@ -1,0 +1,164 @@
+.detail-product {
+    width: 100%;
+    margin: 30px 0;
+}
+
+.info {
+    display: flex;
+}
+
+.picture {
+    width: 400px;
+    height: 400px;
+    border-radius: 20px;
+    border: 1px solid black;
+    overflow: hidden;
+    margin: 20px;
+    position: relative;
+}
+
+.picture img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.special {
+    position: absolute;
+    text-align: center;
+    top: 0;
+    right: 0;
+    border-radius: 20px 0 0 20px;
+    padding: 10px;
+    background: rgba(22, 14, 35, 0.95);
+    color: white;
+}
+
+.info .infomation {
+    flex: 1;
+    margin: 20px;
+}
+
+.nameProduct {
+    font-size: 50px;
+}
+
+.priceProduct {
+    font-size: 30px;
+    font-weight: 500;
+    color: grey;
+    margin: 10px 0;
+}
+
+.countItem {
+    display: inline-block;
+    margin: 30px 0;
+    border: 1px solid gray;
+    border-radius: 30px;
+    overflow: hidden;
+    width: 10%;
+}
+
+.decrease, .increase {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: none;
+    outline: none;
+    background: rgba(22, 14, 35, 0.75);
+    color: white;
+    font-size: larger;
+}
+
+.count{
+    border: none;
+    outline: none;
+    width: 20%;
+}
+
+.addItem {
+    padding: 15px 35px;
+    margin: 20px 0;
+    border: none;
+    outline: none;
+    color: white;
+    background: rgba(22, 14, 35, 0.95);
+}
+
+.addItem:hover {
+    background: rgba(22, 14, 35, 0.55);
+}
+
+.more-info {
+    margin: 0 20px;
+}
+
+.description {
+    margin: 10px 0;
+}
+
+.comment {
+    margin: 0 20px;
+    text-align: center;
+}
+.comment button {
+    width: 30%;
+    margin: 20px 0;
+    padding: 10px 0;
+    border: none;
+    outline: none;
+    background: rgba(22, 14, 35, 0.75);
+    color: white;
+}
+.input {
+    padding: 10px;
+    width: 100%;
+}
+
+.viewComment {
+    margin: 20px;
+    border-radius: 10px;
+    padding: 8px;
+}
+
+.box {   
+    height: 550px;
+    overflow: hidden scroll;
+}
+.showComment {
+    width: 100%;
+    border-radius: 10px;
+    background: rgba(247, 226, 236, 0.75);
+    padding: 10px;
+    margin-top: 25px;
+}
+
+.head {
+    display: flex;
+    align-items: center;
+}
+
+.nameinfo {
+    flex: 1;
+    margin: 15px;
+    border-bottom: 1px solid rgba(233, 74, 151, 0.25);
+}
+
+.avatar-comment {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+.avatar-comment img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.detail-comment {
+    margin-left: 65px;  
+}
+.textComment {
+    display: block;
+    margin: 10px 0;
+}
