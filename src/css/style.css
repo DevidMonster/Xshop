@@ -192,6 +192,21 @@ header {
 
 
 /* ----Products---- */
+.filter {
+    padding: 20px;
+
+}
+.filter select {
+    padding: 10px;
+    outline: none;
+
+}
+.filter button {
+    padding: 10px;
+    outline: none;
+    background: none;
+    border: 1px solid black;
+}
 
 .title {
     width: 20%;

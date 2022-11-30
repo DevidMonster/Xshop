@@ -8,6 +8,8 @@ const id = document.querySelector(".idItem");
 const increase = document.querySelector(".increase")
 const decrease = document.querySelector(".decrease")
 const count = document.querySelector(".count")
+const form = document.querySelectorAll(".form-change-comment");
+const titleComment = document.getElementById("title_Comment")
 
 //detail-person
 const changeName = document.querySelector("#change-name")
@@ -17,6 +19,11 @@ const fullName = document.querySelector("#name")
 const email = document.querySelector("#email")
 const emailStorage = document.querySelector("#emailStorage")
 const nameStorage = document.querySelector("#nameStorage")
+
+
+//statistical
+const chart = document.getElementById("chart")
+const btn_view = document.getElementById("view-chart")
 
 function show(button) {
     add(button);
@@ -106,4 +113,37 @@ if(submit) {
 console.log(changeName)
 function disabledFalse() {
     submit.disabled = false;
+}
+
+if(count) {
+    let bool = true
+    function change(button, index) {
+        if(bool) {
+            button.innerText = "Hủy"
+            console.log(form)
+            form[index].style.display = "block";
+            titleComment.style.display="none";
+            bool = false
+        } else {
+            button.innerText = "Thay đổi"
+            form[index].style.display = "none";
+            titleComment.style.display="block";
+            bool = true
+        }
+    }
+}
+
+if(chart) {
+    let bool = true;
+    btn_view.addEventListener('click', () => {
+        if(bool) {
+            chart.classList.remove("hide-chart")
+            chart.classList.add("show-chart");
+            bool = false;
+        } else {
+            chart.classList.remove("show-chart")
+            chart.classList.add("hide-chart")
+            bool = true
+        }
+    })
 }

@@ -20,5 +20,5 @@
 
     move_uploaded_file($_FILES["avatar"]["tmp_name"],"../src/images/".$_FILES["avatar"]["name"]);
 
-    header("location:../view/detail-Person.php?id=$id"); //điều hướng về trang admin.php sau khi đã xử lý xong việc thêm mới
+    header("location:../view/client-view/detail-Person.php?id=$id"); //điều hướng về trang admin.php sau khi đã xử lý xong việc thêm mới
 ?>  

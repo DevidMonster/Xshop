@@ -1,30 +1,7 @@
  <!-- form đăng nhập -->
     <?php
-        session_start(); //bắt đầu session
-
-        include "../model/connect.php"; 
-        $query = "select * from person"; 
-        $users = getAll($query); 
-        $error=" ";
-        foreach($users as $value){ 
-            if(isset($_POST["btn-login"])){
-                if(!$_POST["username"] == "" && !$_POST["password"] == ""){
-                    if($_POST["username"] == $value["name"] && $_POST["password"] == $value["passWord"]){ 
-                        $_SESSION["username"] = $_POST["username"]; 
-                        $_SESSION["avatar"] = "./src/images/".$value["picture"];
-                        $_SESSION["id"] = $value["role"];
-                        $_SESSION["idPerson"] = $value["id"];
-                        if($_SESSION["id"] == 1) {
-                            header("location:./index.php"); 
-                        } else {
-                            header("location:./admin-view/main.php");
-                        }
-                    } else {
-                        $error =  "*Nhập sai mật khẩu hoặc tên đăng nhập";
-                    }
-                }
-            }
-        }
+        include_once "../model/connect.php"; 
+        include_once "../controller/login.php"; 
     ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -57,7 +34,9 @@
             
             <button type="submit" name="btn-login">Login</button>
 
-            <span>Dont have acount? <a href="./signup.php">Create here</a></span>
+            <span>Dont have acount? <a href="./signup.php">Create here</a></span> <br>
+            <br>
+            <span><a href="./forgot-pass.php">Forgot Password</a></span>
         </form>
     </div>
 </body>

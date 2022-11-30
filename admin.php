@@ -1,1 +1,0 @@
-<?php header("location:./view/admin-view/main.php"); ?>

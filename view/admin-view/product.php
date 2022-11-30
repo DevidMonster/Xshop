@@ -1,22 +1,6 @@
 <?php
-    include '../../model/connect.php';
-    if(!empty($_POST["findName"])) {
-        $filter = $_POST["findName"];
-        $query = "select * from product where productName like '%$filter%'";
-        $productList = getAll($query); 
-    } else {
-        $query = 'select * from product';
-        $productList = getAll($query);
-    }
-    session_start();
-    if(empty($_SESSION)) {
-        header("location:../login.php");
-    }  else {
-        if($_SESSION["id"] == 1) {
-            header("location:../index.php");
-        }
-    }
-
+    include_once '../../model/connect.php';
+    include_once '../../model/product.php';
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -31,38 +15,9 @@
 </head>
 <body>
     <div class="containers">
-        <aside>
-            <div class="logo">
-                <img src="../../src/images/logo.png" alt="">
-            </div>
-            <ul class="menu">
-                <li><a href="main.php"><i class="fa fa-th-large" aria-hidden="true"></i> Dashboard</a></li>
-                <li><a href="product.php" id="active"><i class="fa fa-shopping-bag" aria-hidden="true"></i> Products</a></li>
-                <li><a <?php if($_SESSION["id"] == 2) { echo "onclick=(alert('Bạn_không_phải_quản_lý'))"; } else { echo "href='users.php'"; }?> ><i class="fa fa-laptop" aria-hidden="true"></i> Users</a></li>
-                <li><a href="category.php"><i class="fa fa-list-alt" aria-hidden="true"></i> Category</a></li>
-                <li><a href="comment.php"><i class="fa fa-comments" aria-hidden="true"></i> Comment</a></li>
-                <li><a <?php if($_SESSION["id"] == 2) { echo "onclick=(alert('Bạn_không_phải_quản_lý'))"; } else { echo "href='statistical.php'"; }?> ><i class="fa fa-bar-chart" aria-hidden="true"></i> Statistical</a></li>
-            </ul>
-        </aside>
+        <?php include_once 'aside.php'?>
         <main>
-            <header>
-                <div class="option">
-                    <div class="row">
-                        <div class="ava">
-                            <img src="../.<?php echo $_SESSION["avatar"] ?>" alt="">
-                        </div>
-                        <div class="userName">
-                            <p>welcome, <a href="#"><?php echo $_SESSION["username"]; ?></a></p>
-                        </div>
-                        <div class="connect">
-                            <div class="center">
-                                <a href="#"><button><i class="fa fa-user-circle-o" aria-hidden="true"></i> Profile</button></a>
-                                <a href="../../controller/logout.php"><button><i class="fa fa-arrow-circle-o-left" aria-hidden="true"></i> Logout</button></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>   
-            </header>
+            <?php require_once "header.php"?>
             <div class="banner">
                 <div class="title">
                     <h1>Welcome to Products</h1>
@@ -76,7 +31,7 @@
                 <div class="tools">
                     <p>Products List</p>
                     <div class="action">
-                        <a href="../add-new-product.php"><button>Add New Product</button></a>
+                        <a href="./form-action/add-new-product.php?ctr=product"><button>Add New Product</button></a>
                         <form action="product.php" method="POST">
                             <input type="text" name="findName" placeholder="Search name Product">
                             <button><i class="fa fa-search" aria-hidden="true"></i></button>
@@ -112,7 +67,7 @@
                                     <td><?php echo $value["saleOff"]?></td>
                                     <td><?php echo $value["viewCount"]?></td>
                                     <td class="func">
-                                        <a href="../update-product.php?id=<?php echo $value["id"] ?>"><button>Update</button></a>
+                                        <a href="./form-action/update-product.php?id=<?php echo $value["id"]?>&ctr=product"><button>Update</button></a>
                                         <button class="delete-product" id="<?php echo $value["id"] ?>" onClick="show(this)" >Delete</button>
                                     </td>
                                 </tr>

@@ -15,5 +15,5 @@
         connect($query);
     }
 
-    header("location:../view/detailProduct.php?id=$idItem"); 
+    header("location:../view/client-view/detailProduct.php?id=$idItem"); 
 ?>

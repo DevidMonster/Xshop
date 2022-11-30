@@ -4,5 +4,5 @@
     $idItem = $_GET["idItem"];
     $query = "DELETE FROM comment WHERE id = $id";
     connect($query);
-    header("location:../view/admin-view/detail-comment.php?id=$idItem");
+    header("location:../view/admin-view/detail-comment.php?id=$idItem&ctr=comment");
 ?>

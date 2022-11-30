@@ -3,5 +3,5 @@
     $id = $_GET["id"];
     $query = "DELETE FROM product WHERE id=$id";
     connect($query);
-    header("location:../view/admin-view/product.php");
+    header("location:../view/admin-view/product.php?ctr=product");
 ?>

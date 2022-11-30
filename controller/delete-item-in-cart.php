@@ -5,5 +5,5 @@
     $idPerson = $_SESSION["idPerson"];
     $query = "DELETE FROM cart WHERE idPerson like n'$idPerson' AND idItem=$id";
     connect($query);
-    header("location:../view/cart.php");
+    header("location:../view/client-view/cart.php");
 ?>
